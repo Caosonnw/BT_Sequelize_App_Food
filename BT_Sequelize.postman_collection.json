@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "7df80c13-d31e-4571-9765-7b686213ea2f",
+		"name": "BT_Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30584462"
+	},
+	"item": [
+		{
+			"name": "API get-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/get-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API get-like-res",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "headers",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjcsImtleSI6ImdlRGRCYSJ9LCJpYXQiOjE3MTQ2NjYwMjgsImV4cCI6MTcxNDY2NjMyOH0.RblDHq8Ztp_sCCBobDhjbCjOaCR0b3s9SN5tQ9bNK9o",
+						"type": "text",
+						"uuid": "7806b392-f509-4ce9-9668-bde10d765bcc",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/like/get-like-res/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"get-like-res",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API get-users-who-liked-res",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/like/get-users-who-liked-res/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"get-users-who-liked-res",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Cao Sơn\",\r\n    \"email\": \"caoson@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/sign-up",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"caoson@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API like-res",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjcsImtleSI6IkxzTDhQeiJ9LCJpYXQiOjE3MTQ3NjI2MTAsImV4cCI6MTcxNDc2MjYxNX0.h_-v_FY7rqFvHlKUXbRUNEup6KOKFHKiVUCT1JC0f34",
+						"uuid": "bfaa7b77-a4c0-403b-808a-a7b2a3d6e8a0"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/like/like-res/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"like-res",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API user-order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjcsImtleSI6Iml6Yzl4bCJ9LCJpYXQiOjE3MTQ3NjQwODksImV4cCI6MTcxNDc2NDA5NH0.Mvo1G5ByZAt7e0zSciArY_eec5EbdMFhcIjc8wJNsW8",
+						"uuid": "36749710-19af-4798-94ea-eb27509c8221"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"arr_sub_id\": [1,3,4]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/user-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"user-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API get-order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/get-order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"get-order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
